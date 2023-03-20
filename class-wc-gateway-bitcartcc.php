@@ -529,7 +529,7 @@ function woocommerce_bitcartcc_init()
                     sprintf('%s/%s', $url, 'invoices'),
                     $fields
                 );
-
+             $this->log($fields)
                 if (false === isset($invoice) || true === empty($invoice)) {
                     $this->log(
                         '    [Error] The BitcartCC payment plugin was called to process a payment but could not instantiate an invoice object.'
